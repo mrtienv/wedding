@@ -31,7 +31,7 @@
                     <div class="guest_name">
                         <p>Bạn nhập họ tên vào ô dưới đây nhé ạ:</p>
                         <span class="error" style="color: red"></span>
-                        <form action="#">
+                        <form action="{{route('welcome')}}" method="POST">
                             <label for="name"></label>
                             <input type="text" name="" id="name" />
                         </form>

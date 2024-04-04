@@ -22,7 +22,8 @@ class WelcomeController extends Controller
             // Search for the name in the JSON data
             foreach ($data as $item) {
                 if ($item['Name'] === $name) {
-                    return response()->json(['redirect' => route('invite')]);
+//                    return Redirect::route('invite', ['name' => $item['Name']]);
+                    return response()->json(['redirect' => route('invite', ['name' => $name])]);
                 }
             }
 
@@ -31,8 +32,18 @@ class WelcomeController extends Controller
         }
         return view('welcome');
     }
-    public function invite(Request $request)
+    public function invite(Request $request, $name)
     {
+        $jsonContent = file_get_contents(public_path('guests.json'));
+        // Decode JSON data to an associative array
+        $jsons = json_decode($jsonContent, true);
+        $data = [];
+        foreach ($jsons as $item) {
+            if ($item['Name'] === $name) {
+                $data['invite'] = $item['Loi chuc'];
+                $data['name'] = $item['Name'];
+            }
+        }
         if ($request->isMethod('post')) {
             $name = $request->input('name');
 
@@ -52,7 +63,7 @@ class WelcomeController extends Controller
             // If name not found
             return response()->json(['success' => false, 'message' => 'Name not found']);
         }
-        return view('invite');
+        return view('invite', $data);
     }
     public function thanks(Request $request)
     {

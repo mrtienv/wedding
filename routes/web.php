@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\WelcomeController::class, 'welcome'])->name('welcome');
 Route::get('/import', [\App\Http\Controllers\WelcomeController::class, 'importCSV']);
-Route::get('/invite', [\App\Http\Controllers\WelcomeController::class, 'invite'])->name('invite');
+Route::get('/invite/{name}', [\App\Http\Controllers\WelcomeController::class, 'invite'])->name('invite');
 Route::get('/thanks', [\App\Http\Controllers\WelcomeController::class, 'thanks'])->name('thanks');
 Route::post('/', [\App\Http\Controllers\WelcomeController::class, 'welcome']);

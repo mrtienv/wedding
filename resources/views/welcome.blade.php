@@ -20,10 +20,10 @@
                     <div class="heading_line">
                         <h4 class="fw-400">Lời mời đám cưới từ</h4>
                     </div>
-                    <div class="heading_name" style="font-family: 'Playfair Display', seri; font-size: 94px; color: #535750">
+                    <div class="heading_name">
                         <i>
                             <h2 style="display: block">Trường</h2>
-                            <h2 style="display: block">&</h2>
+                            <h2 style="display: block; line-height: 1;">&</h2>
                             <h2 style="display: block">Hà</h2>
                         </i>
 

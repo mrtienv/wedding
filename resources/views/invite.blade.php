@@ -21,7 +21,7 @@
                     <div class="heading_line">
                         <h3 style="font-family: 'charmonman', 'Roboto'">Dear anh Tung</h3>
                     </div>
-                    <div style="font-family: 'SVN-Dancing Script', 'Roboto'; font-size: 30px" class="message">
+                    <div style="font-family: 'SVN-Dancing Script', 'Roboto'; font-size: 26px" class="message">
                         <p>Thời gian anh em mình cùng vào VPBank đã thấm thoát 8 năm trôi qua.
                         </p>
                         <p>

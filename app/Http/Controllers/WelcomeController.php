@@ -40,7 +40,7 @@ class WelcomeController extends Controller
         $data = [];
         foreach ($jsons as $item) {
             if ($item['Name'] === $name) {
-                $data['invite'] = $item['Loi chuc'];
+                $data['invite'] = $item['invite'];
                 $data['name'] = $item['Name'];
             }
         }

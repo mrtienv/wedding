@@ -49,7 +49,7 @@ img {
 
 @media screen and (min-width:1200px) {
     .container {
-        max-width: 980px;
+        max-width: 860px;
         margin: 0 auto;
     }
 }
@@ -58,14 +58,22 @@ img {
 .pic {
     text-align: center;
     position: relative;
-    font-size: 1.6rem;
+    font-size: 14px;
 }
 
 .pic img {
     max-height: 100%;
 }
 
+@media screen and (min-width:768px) {
+    .pic {
+        font-size: 24px;
+    }
+}
 @media screen and (min-width:1200px) {
+    .pic {
+        font-size: 30px;
+    }
     .pic img {
         max-height: 100rem;
     }
@@ -77,9 +85,10 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* padding: 2rem 0; */
     /* border: 1px solid #333; */
-    width: 66%;
-    height: 66%;
+    width: 69%;
+    height: 69%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,13 +101,9 @@ img {
 @media screen and (min-width:1200px) {
     .content_card {
         width: 50%;
-        height: 75%;
+        /* height: 69%; */
         display: flex;
     }
-}
-
-.content_card .heading_line h4 {
-    font-size: 1.6rem;
 }
 
 .content_card .heading_name {
@@ -107,30 +112,39 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+}
+.content_card .heading_name h2 {
+    font-size: 12vw;
+    padding: 10px;
+    font-family: 'Playfair Display', seri;
+    /* font-size: 86px;  */
+    color: #535750
 }
 
-.content_card .heading_name h1 {
-    font-size: 16vw;
-    padding: 1rem;
-
+@media screen and (min-width:768px) {
+    .content_card .heading_name h2 {
+        font-size: 16vw
+    }
 }
 
 @media screen and (min-width:1200px) {
-    .content_card .heading_name h1 {
-        font-size: 10vw;
+    .content_card .heading_name h2 {
+        font-size: 144px;
     }
 }
 
 .content_card form,
 .content_card p {
-    padding: 0.5rem 1rem;
+    padding: 5px 10px;
+    margin-bottom: 10px;
 }
 
 .content_card form input {
     border: 0px solid transparent;
     background-color: #77A78A;
-    padding: 1rem;
-    min-width: 50%;
+    padding: 8px;
+    max-width: 69%;
     outline: 0;
     border-radius: 2rem;
     text-align: center;
@@ -183,7 +197,7 @@ input.number {
     user-select: none;
     border: 1px solid transparent;
     padding: .375rem 1.75rem;
-    font-size: 1rem;
+    font-size: 10px;
     line-height: 1.5;
     border-radius: .25rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;

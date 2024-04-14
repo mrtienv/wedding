@@ -19,13 +19,10 @@
                 <img src="{{asset('./pic-1.png')}}" alt="" class="invitePage"/>
                 <div class="content_card">
                     <div class="heading_line">
-                        <h3 style="font-family: 'charmonman', 'Roboto'" class="nameGuest">Dear anh Tung</h3>
+                        <h3 style="font-family: 'charmonman', 'Roboto'" class="nameGuest">Dear {{$Vocative . ' ' . $Name}}</h3>
                     </div>
                     <div style="font-family: 'SVN-Dancing Script', 'Roboto'" class="message">
-                        <p>Thời gian anh em mình cùng vào VPBank đã thấm thoát 8 năm trôi qua.
-                        </p>
-                        <p>
-                            Thằng em dại 8 năm trước cuối cùng giờ cũng tìm được vợ. Mong anh và gia đình sắp xếp thời gian qua chung vui tới bến với vợ chồng em tại:
+                        <p>{{$Invite}}
                         </p>
                     </div>
                     <div class="heading">
@@ -106,11 +103,12 @@
                         </div>
                     </div>
                     <div class="guest_number">
-                        <p class="heading">Nếu có thể, phản hồi số người tham dự anh Tùng nhé:
-                        </p>
-                        <form action="#" class="form">
-                            <label for="number"></label>
-                            <input class="number" type="number" name=" id="number" />
+                        <p class="heading">Nếu có thể, phản hồi số người tham dự {{$Vocative . ' ' . $Name}} nhé:</p>
+                        <form action="{{ route('invite', ['name' => $Name]) }}" method="POST" class="form">
+                            @csrf <!-- Add CSRF token for security -->
+                            <label for="number">Số người tham dự:</label>
+                            <input class="number" style="color: black" type="number" name="number" id="number" />
+                            <input hidden name="name" value="{{$Name}}" />
                             <button class="btn" type="submit" style="color: #fff">Xác nhận</button>
                         </form>
                     </div>

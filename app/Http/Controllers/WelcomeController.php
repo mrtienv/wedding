@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Redirect;
+
 
 class WelcomeController extends Controller
 {
@@ -32,6 +32,7 @@ class WelcomeController extends Controller
         }
         return view('welcome');
     }
+
     public function invite(Request $request, $name)
     {
         $jsonContent = file_get_contents(public_path('guests.json'));
@@ -40,47 +41,72 @@ class WelcomeController extends Controller
         $data = [];
         foreach ($jsons as $item) {
             if ($item['Name'] === $name) {
-                $data['invite'] = $item['invite'];
-                $data['name'] = $item['Name'];
+                $data['Invite'] = $item['Invite'];
+                $data['Name'] = $item['Name'];
+                $data['Vocative'] = $item['Vocative'];
             }
         }
+
         if ($request->isMethod('post')) {
-            $name = $request->input('name');
+            try {
+                $number = $request->input('number');
+                $name = $request->input('name');
 
-            // Read the JSON file
-            $jsonContent = file_get_contents(public_path('guests.json'));
+                // Create or append to the existing CSV file
+                $csvData = [
+                    [$name, $number] // Data to be appended
+                ];
 
-            // Decode JSON data to an associative array
-            $data = json_decode($jsonContent, true);
+                // Determine the file path
+                $filePath = 'guest-number.csv';
 
-            // Search for the name in the JSON data
-            foreach ($data as $item) {
-                if ($item['Name'] === $name) {
-                    return response()->json(['redirect' => route('invite')]);
+                // Open the CSV file for appending
+                $handle = fopen($filePath, 'a');
+
+                // Write the CSV data to the file
+                foreach ($csvData as $row) {
+                    fputcsv($handle, $row);
                 }
+
+                // Close the file handle
+                fclose($handle);
+
+                // Redirect back or return a response indicating success
+                return view('thanks', $data);
+            } catch (\Exception $exception) {
+                return view('thanks', $data);
             }
 
-            // If name not found
-            return response()->json(['success' => false, 'message' => 'Name not found']);
         }
+
         return view('invite', $data);
     }
+
     public function thanks(Request $request)
     {
 
         return view('thanks');
     }
-    public function importCSV() {
+
+    public function importCSV()
+    {
         try {
             $filePath = public_path('loichuc.csv');
 
             // Check if the file exists
             if (File::exists($filePath)) {
-                // Read the CSV file into an array
-                $csvData = array_map('str_getcsv', file($filePath));
+                // Open the CSV file for reading
+                $fileHandle = fopen($filePath, 'r');
 
-                // Extract the header row
-                $header = array_shift($csvData);
+                $csvData = [];
+
+                $header = fgetcsv($fileHandle);
+
+                while (($row = fgetcsv($fileHandle)) !== false) {
+                    // Add the row to the CSV data array
+                    $csvData[] = $row;
+                }
+                fclose($fileHandle);
 
                 // Initialize an empty array to store the imported data
                 $importedData = [];

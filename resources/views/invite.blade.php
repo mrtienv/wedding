@@ -16,27 +16,26 @@
         <div>
 
             <div id="pic2" class="pic">
-                <img src="{{asset('./pic-1.png')}}" alt="" />
+                <img src="{{asset('./pic-1.png')}}" alt="" class="invitePage"/>
                 <div class="content_card">
                     <div class="heading_line">
-                        <h3 style="font-family: 'charmonman', 'Roboto'">Dear anh Tung</h3>
+                        <h3 style="font-family: 'charmonman', 'Roboto'" class="nameGuest">Dear anh Tung</h3>
                     </div>
-                    <div style="font-family: 'SVN-Dancing Script', 'Roboto'; font-size: 26px" class="message">
+                    <div style="font-family: 'SVN-Dancing Script', 'Roboto'" class="message">
                         <p>Thời gian anh em mình cùng vào VPBank đã thấm thoát 8 năm trôi qua.
                         </p>
                         <p>
                             Thằng em dại 8 năm trước cuối cùng giờ cũng tìm được vợ. Mong anh và gia đình sắp xếp thời gian qua chung vui tới bến với vợ chồng em tại:
                         </p>
                     </div>
-                    <div style="font-size: 30px">
+                    <div class="heading">
                         <p>Sân Khấu Ngoài Trời
                             TESCO HOUSE</p>
-                        <hr>
                     </div>
-                    <div style="font-size: 30px">
+                    <div class="heading">
                         <p style="padding: 8px;">Tổ 2 - Cuối đường Thạch Cầu - Long Biên - Hà Nội</p>
                         <p style="padding: 8px;">Thứ 7, ngày 04/05/2024</p>
-                        <div class="d-flex around">
+                        <div class="d-flex around icons">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
 
@@ -53,10 +52,10 @@
                                         <path d="M 14.366 35.504 h -3.915 c -2.598 0 -4.711 -2.113 -4.711 -4.711 s 2.113 -4.711 4.711 -4.711 h 3.915 c 2.598 0 4.711 2.113 4.711 4.711 S 16.963 35.504 14.366 35.504 z M 10.451 28.083 c -1.495 0 -2.711 1.216 -2.711 2.711 s 1.216 2.711 2.711 2.711 h 3.915 c 1.495 0 2.711 -1.216 2.711 -2.711 s -1.216 -2.711 -2.711 -2.711 H 10.451 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(119,167,138); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
                                     </g>
 </svg>
-                                <p style="padding: 0">
+                                <p>
                                     ĐÓN KHÁCH
                                 </p>
-                                <p style="padding: 0">
+                                <p>
                                     17:00
                                 </p>
                             </div>
@@ -75,10 +74,10 @@
                                         <path d="M 28.615 82.342 C 12.837 82.342 0 69.505 0 53.727 s 12.837 -28.615 28.615 -28.615 c 6.164 0 12.035 1.929 16.979 5.579 c 0.445 0.328 0.539 0.954 0.211 1.398 c -0.329 0.445 -0.953 0.539 -1.398 0.211 c -4.598 -3.395 -10.059 -5.188 -15.792 -5.188 C 13.939 27.111 2 39.051 2 53.727 s 11.939 26.615 26.615 26.615 S 55.23 68.402 55.23 53.727 c 0 -6.655 -2.469 -13.025 -6.951 -17.937 c -0.373 -0.408 -0.344 -1.041 0.064 -1.413 c 0.407 -0.371 1.039 -0.343 1.412 0.064 c 4.82 5.281 7.475 12.13 7.475 19.285 C 57.23 69.505 44.394 82.342 28.615 82.342 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(119,167,138); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
                                     </g>
 </svg>
-                                <p style="padding: 0">
+                                <p>
                                     NGHI LỄ
                                 </p>
-                                <p style="padding: 0">
+                                <p>
                                     17:30
                                 </p>
                             </div>
@@ -97,21 +96,21 @@
                                         <path d="M 35 46 c -0.552 0 -1 -0.448 -1 -1 c 0 -6.066 4.935 -11 11 -11 c 0.552 0 1 0.448 1 1 c 0 0.552 -0.448 1 -1 1 c -4.962 0 -9 4.038 -9 9 C 36 45.552 35.552 46 35 46 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(119,167,138); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
                                     </g>
 </svg>
-                                <p style="padding: 0">
+                                <p>
                                     KHAI TIỆC
                                 </p>
-                                <p style="padding: 0">
+                                <p>
                                     18:00
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="guest_number">
-                        <p style="font-size: 30px; padding: 0">Nếu có thể, phản hồi số người tham dự anh Tùng nhé:
+                        <p class="heading">Nếu có thể, phản hồi số người tham dự anh Tùng nhé:
                         </p>
                         <form action="#" class="form">
                             <label for="number"></label>
-                            <input class="number" type="number" name="" id="number" />
+                            <input class="number" type="number" name=" id="number" />
                             <button class="btn" type="submit" style="color: #fff">Xác nhận</button>
                         </form>
                     </div>

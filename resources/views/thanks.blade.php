@@ -30,16 +30,16 @@
                     <div class="row">
 
                         <div class="column">
-                        <img src="{{asset('./z5340130168749_e22de87ede43d45f8a4732315dafea55.jpg')}}">
+                        <img src="{{asset('z5340130168749_e22de87ede43d45f8a4732315dafea55.jpg')}}">
                         </div>
                         <div class="column">
-                            <img src="{{asset('./z5340130168747_ec29390f68a5118bbaca729a8f0b46e4.jpg')}}">
+                            <img src="{{asset('z5340130168747_ec29390f68a5118bbaca729a8f0b46e4.jpg')}}">
                         </div>
                         <div class="column">
-                        <img src="{{asset('./z5340130168908_b815640f4549eaeea897a4311a198aa2.jpg')}}">
+                        <img src="{{asset('z5340130168908_b815640f4549eaeea897a4311a198aa2.jpg')}}">
                         </div>
                         <div class="column">
-                        <img src="{{asset('./z5340130168748_cff4ff9cb0a9f17d53dcc653a1aab0e2.jpg')}}">
+                        <img src="{{asset('z5340130168748_cff4ff9cb0a9f17d53dcc653a1aab0e2.jpg')}}">
                         </div>
                         </div>
                     </div>

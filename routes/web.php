@@ -17,5 +17,5 @@ Route::get('/', [\App\Http\Controllers\WelcomeController::class, 'welcome'])->na
 Route::get('/import', [\App\Http\Controllers\WelcomeController::class, 'importCSV']);
 Route::get('/invite/{name}', [\App\Http\Controllers\WelcomeController::class, 'invite'])->name('invite');
 Route::post('/invite/{name}', [\App\Http\Controllers\WelcomeController::class, 'invite'])->name('invite');
-Route::get('/thanks', [\App\Http\Controllers\WelcomeController::class, 'thanks'])->name('thanks');
+Route::get('/thanks/{vocative}', [\App\Http\Controllers\WelcomeController::class, 'thanks'])->name('thanks');
 Route::post('/', [\App\Http\Controllers\WelcomeController::class, 'welcome']);

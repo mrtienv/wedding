@@ -23,7 +23,7 @@ class WelcomeController extends Controller
             foreach ($data as $item) {
                 if ($item['Name'] === $name) {
 //                    return Redirect::route('invite', ['name' => $item['Name']]);
-                    return response()->json(['redirect' => route('invite', ['name' => $name])]);
+                    return response()->json(['success' => true, 'redirect' => route('invite', ['name' => $name])]);
                 }
             }
 
@@ -72,9 +72,9 @@ class WelcomeController extends Controller
                 fclose($handle);
 
                 // Redirect back or return a response indicating success
-                return view('thanks', $data);
+                return view('thanks', ['vocative' => $data['Vocative']]);
             } catch (\Exception $exception) {
-                return view('thanks', $data);
+                return view('thanks', ['vocative' => $data['Vocative']]);
             }
 
         }
@@ -82,10 +82,10 @@ class WelcomeController extends Controller
         return view('invite', $data);
     }
 
-    public function thanks(Request $request)
+    public function thanks(Request $request, $vocative)
     {
 
-        return view('thanks');
+        return view('thanks', compact('vocative'));
     }
 
     public function importCSV()

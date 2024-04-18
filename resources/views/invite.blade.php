@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('./main.css')}}" />
-</head>
-<body>
+@extends('layout')
+
+@section('content')
 <div class="wrapper">
     <div class="container">
         <div>
@@ -103,7 +93,7 @@
                         </div>
                     </div>
                     <div class="guest_number">
-                        <p class="heading">Nếu có thể, phản hồi số người tham dự {{$Vocative . ' ' . $Name}} nhé:</p>
+                        <p class="heading">Nếu có thể, phản hồi số người tham dự {{$Vocative}} nhé:</p>
                         <form action="{{ route('invite', ['name' => $Name]) }}" method="POST" class="form">
                             @csrf <!-- Add CSRF token for security -->
                             <label for="number">Số người tham dự:</label>
@@ -118,5 +108,4 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+@endsection
